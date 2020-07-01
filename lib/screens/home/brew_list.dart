@@ -1,5 +1,5 @@
-import 'package:brew_crew/models/brew.dart';
-import 'package:brew_crew/screens/home/brew_tile.dart';
+import 'package:IoT_Dashboard/models/brew.dart';
+import 'package:IoT_Dashboard/screens/home/brew_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

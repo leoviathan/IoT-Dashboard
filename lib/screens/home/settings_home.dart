@@ -1,8 +1,8 @@
-import 'package:brew_crew/models/user.dart';
-import 'package:brew_crew/services/database.dart';
-import 'package:brew_crew/shared/loading.dart';
+import 'package:IoT_Dashboard/models/user.dart';
+import 'package:IoT_Dashboard/services/database.dart';
+import 'package:IoT_Dashboard/shared/loading.dart';
 import 'package:flutter/material.dart';
-import 'package:brew_crew/shared/constants.dart';
+import 'package:IoT_Dashboard/shared/constants.dart';
 import 'package:provider/provider.dart';
 
 class SettingsForm extends StatefulWidget {
@@ -23,7 +23,8 @@ class _SettingsFormState extends State<SettingsForm> {
   Widget build(BuildContext context) {
     final user = Provider.of<User>(context);
 
-    return StreamBuilder<UserData>(
+  return Container();
+    /* return StreamBuilder<UserData>(
       stream: DatabaseService(uid: user.uid).userData,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
@@ -99,6 +100,6 @@ class _SettingsFormState extends State<SettingsForm> {
           return Loading();
         }
       },
-    );
+    ); */
   }
 }

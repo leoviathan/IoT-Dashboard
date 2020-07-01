@@ -1,13 +1,23 @@
-import 'package:brew_crew/models/brew.dart';
-import 'package:brew_crew/models/user.dart';
+import 'package:IoT_Dashboard/models/brew.dart';
+import 'package:IoT_Dashboard/models/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_database/firebase_database.dart'; 
 
 class DatabaseService {
   final String uid;
 
   DatabaseService({this.uid});
 
-  //collection reference
+
+  Future showdata() async{
+    DatabaseReference sensorData = FirebaseDatabase.instance.reference().child('users/$uid/IotData/Locations/Data/');
+    sensorData.limitToFirst(2).once().then((DataSnapshot snapshot){
+      print(snapshot.value);
+    });
+  }
+}
+
+/*   //collection reference
   final CollectionReference brewCollection =
       Firestore.instance.collection('brews');
 
@@ -52,6 +62,5 @@ class DatabaseService {
   Stream<UserData> get userData {
     return brewCollection.document(uid).snapshots()
       .map(_userDataFromSnapshot);
-  }
-}
+  } */
 

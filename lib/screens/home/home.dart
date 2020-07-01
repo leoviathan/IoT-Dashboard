@@ -1,17 +1,35 @@
-import 'package:brew_crew/models/brew.dart';
-import 'package:brew_crew/screens/home/settings_home.dart';
-import 'package:brew_crew/services/auth.dart';
+import 'package:IoT_Dashboard/models/brew.dart';
+import 'package:IoT_Dashboard/screens/home/settings_home.dart';
+import 'package:IoT_Dashboard/services/auth.dart';
 import 'package:flutter/material.dart';
-import 'package:brew_crew/services/database.dart';
+import 'package:IoT_Dashboard/services/database.dart';
 import 'package:provider/provider.dart';
 import 'brew_list.dart';
 
 class Home extends StatelessWidget {
-  final AuthService _authService = AuthService();
+  //final AuthService _authService = AuthService();
+  DatabaseService db = DatabaseService(uid: 'rs0B8dePwJUeq5OVPBcY0AeVRxb2');
 
   @override
   Widget build(BuildContext context) {
-    void _showSettingsPanel() {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('IoT Dashboard'),
+      ),
+      body: Container(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          db.showdata();
+        },
+        child: const Icon(Icons.settings_remote),
+        ),
+        );
+
+    
+  }
+}
+
+/* void _showSettingsPanel() {
       showModalBottomSheet(
           isScrollControlled: true,
           context: context,
@@ -22,9 +40,8 @@ class Home extends StatelessWidget {
               child: SettingsForm(),
             );
           });
-    }
-
-    return StreamProvider<List<Brew>>.value(
+    } */
+    /* return StreamProvider<List<Brew>>.value(
       value: DatabaseService().brews,
       child: Scaffold(
         backgroundColor: Colors.brown[50],
@@ -57,6 +74,4 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
+    ); */

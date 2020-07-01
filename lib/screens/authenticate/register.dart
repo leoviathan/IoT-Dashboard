@@ -1,6 +1,6 @@
-import 'package:brew_crew/services/auth.dart';
-import 'package:brew_crew/shared/constants.dart';
-import 'package:brew_crew/shared/loading.dart';
+import 'package:IoT_Dashboard/services/auth.dart';
+import 'package:IoT_Dashboard/shared/constants.dart';
+import 'package:IoT_Dashboard/shared/loading.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {
@@ -24,11 +24,11 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return loading ? Loading() : Scaffold(
-      backgroundColor: Colors.brown[100],
+      backgroundColor: Colors.blue[100],
       appBar: AppBar(
-        backgroundColor: Colors.brown[400],
+        backgroundColor: Colors.blue[400],
         elevation: 0.0,
-        title: Text('Sign up to Brew Crew'),
+        title: Text('Sign up'),
         actions: [
           FlatButton.icon(
             onPressed: () {

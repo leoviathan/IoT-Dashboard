@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:brew_crew/models/brew.dart';
+import 'package:IoT_Dashboard/models/brew.dart';
 
 class BrewTile extends StatelessWidget {
   final Brew brew;
@@ -15,7 +15,7 @@ class BrewTile extends StatelessWidget {
           leading: CircleAvatar(
             radius: 25,
             backgroundColor: Colors.brown[brew.strength],
-            backgroundImage: AssetImage('images/coffee_icon.png'),
+            //backgroundImage: AssetImage('images/coffee_icon.png'),
           ),
           title: Text(brew.name),
           subtitle: Text('Takes ${brew.sugars} sugar(s)'),

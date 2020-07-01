@@ -1,5 +1,5 @@
-import 'package:brew_crew/screens/authenticate/register.dart';
-import 'package:brew_crew/screens/authenticate/sign_in.dart';
+import 'package:IoT_Dashboard/screens/authenticate/register.dart';
+import 'package:IoT_Dashboard/screens/authenticate/sign_in.dart';
 import 'package:flutter/material.dart';
 
 class Authenticate extends StatefulWidget {
